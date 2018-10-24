@@ -9,7 +9,7 @@ header("location: profile.php");
 <!DOCTYPE html>
 <html>
 <head>
-<title>Login Form in PHP with Session</title>
+<title>BugHive, Just another platform.</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
