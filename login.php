@@ -1,13 +1,20 @@
 <?php
 session_start(); // Starting Session
 $error=''; // Variable To Store Error Message
-if (isset($_POST['submit'])) {
-if (empty($_POST['username']) || empty($_POST['password'])) {
+if (isset($_POST['submit']))
+    {
+       if (empty($_POST['username']) || empty($_POST['password']) ) {
 $error = "Username or Password is invalid";
-}
-else
-{
-// Define $username and $password
+       }
+
+       elseif (empty($_POST['code'])) {
+	$error = "Please enter captcha!";}
+
+       elseif ($_POST['code'] != $_SESSION['rand_code']) {
+       $error = "Enter correct captcha";}
+       else
+       {
+//Define $username and $password
 $username=$_POST['username'];
 $password=$_POST['password'];
 // Establishing Connection with Server by passing server_name, user_id and password as a parameter
@@ -28,7 +35,7 @@ header("location: profile.php"); // Redirecting To Other Page
 } else {
 $error = "Username or Password is invalid";
 }
-mysqli_close($connection); // Closing Connection
+mysqli_close($connection); // Closing Connection */
 }
 }
 ?>
