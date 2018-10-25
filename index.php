@@ -4,12 +4,12 @@ include('login.php'); // Includes Login Script
 if(isset($_SESSION['login_user'])){
 header("location: profile.php");
 }
-//else{ setcookie ("PHPSESSID", "", time() - 3600, "/");}
+else{ setcookie ("PHPSESSID", "arun", time() + 10, "/");}
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>BugHive, Just another platform.</title>
+<title>BugHive, just another platform.</title>
 <link href="style.css" rel="stylesheet" type="text/css">
 </head>
 <body>
@@ -22,6 +22,9 @@ header("location: profile.php");
 <input id="name" name="username" placeholder="username" type="text">
 <label>Password :</label>
 <input id="password" name="password" placeholder="**********" type="password">
+<label>Type the below code:</label>
+<input type="text" name="code" />
+<img src="captcha.php"/>
 <input name="submit" type="submit" value=" Login ">
 <span><?php echo $error; ?></span>
 </form>
