@@ -4,7 +4,7 @@ include('login.php'); // Includes Login Script
 if(isset($_SESSION['login_user'])){
 header("location: profile.php");
 }
-else{ setcookie ("PHPSESSID", "arun", time() + 10, "/");}
+else{ }//setcookie ("PHPSESSID", "arun", time() + 10, "/");}
 ?>
 <!DOCTYPE html>
 <html>
