@@ -1,17 +1,17 @@
 <?php
 session_start(); // Starting Session
-$error=''; // Variable To Store Error Message
+$error=''; // Variable To Store Error Messagei
+
 if (isset($_POST['submit']))
     {
        if (empty($_POST['username']) || empty($_POST['password']) ) {
-$error = "Username or Password is invalid";
-       }
+	       $error = "Username or Password is invalid";}
 
-       elseif (empty($_POST['code'])) {
-	$error = "Please enter captcha!";}
+       elseif (empty($_POST['code'])){
+	       $error = "Please enter captcha!";}
 
-       elseif ($_POST['code'] != $_SESSION['rand_code']) {
-       $error = "Enter correct captcha";}
+       elseif ($_POST['code'] != $_SESSION['rand_code']){
+	       $error = "Enter correct captcha";}
        else
        {
 //Define $username and $password
