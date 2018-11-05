@@ -53,10 +53,15 @@ border-radius:5px;
 margin-bottom:15px
 }
 #profile {
-padding:50px;
+padding:30px;
 border:1px dashed grey;
 font-size:20px;
 background-color:#DCE6F7
+}
+#guestbook {
+float:right;
+padding:5px;
+border:dashed 1px gray
 }
 #logout {
 float:right;
