@@ -1,6 +1,6 @@
 <?php
 include('login.php'); // Includes Login Script
-
+include('header.php');
 if(isset($_SESSION['login_user'])){
 header("location: profile.php");
 }
